@@ -17,7 +17,7 @@ const Home = ({ navigate }) => (
 
 const Game = ({ navigate }) => {
   useEffect(() => {
-    const bgm = new Audio("/src/assets/sound_bgm.mp3");
+    const bgm = new Audio("src/assets/sound_bgm.mp3");
     bgm.loop = true;
     bgm.play().catch(err => console.log("BGM autoplay blocked:", err));
 
@@ -40,7 +40,7 @@ const App = () => {
 
   const navigate = (newPage, playSound = false) => {
     if (playSound) {
-      const startSound = new Audio("/src/assets/sound_stargame.mp3");
+      const startSound = new Audio("src/assets/sound_stargame.mp3");
       startSound.play().catch(err => console.log("Start sound blocked:", err));
     }
     setPage(newPage);
