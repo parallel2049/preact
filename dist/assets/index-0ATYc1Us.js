@@ -48,7 +48,7 @@ const Home = ({ navigate }) => /* @__PURE__ */ u$1("div", { children: [
 ] });
 const Game = ({ navigate }) => {
   y(() => {
-    const bgm = new Audio("/assets/sound_bgm.mp3");
+    const bgm = new Audio("assets/sound_bgm.mp3");
     bgm.loop = true;
     bgm.play().catch((err) => console.log("BGM autoplay blocked:", err));
     return () => {
@@ -65,7 +65,7 @@ const App = () => {
   const [page, setPage] = d("home");
   const navigate = (newPage, playSound = false) => {
     if (playSound) {
-      const startSound = new Audio("/assets/sound_stargame.mp3");
+      const startSound = new Audio("assets/sound_stargame.mp3");
       startSound.play().catch((err) => console.log("Start sound blocked:", err));
     }
     setPage(newPage);
