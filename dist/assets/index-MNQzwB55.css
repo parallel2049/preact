@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*safari window.innerHeight*/
+.html, body {
+    height: calc(var(--vh) * 100); /* safari window.innerHeight */
+    overflow: hidden; /* Disable scrolling */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: fixed; /* Fixed the page prevent iOS browser from sliding */
+    background:rgba(0, 0, 0, 1);
+}
+
+/* background image */
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background: url(cover_bg_min-nmAqY-Vw.png) no-repeat center center, black; /* phone */
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+@media (min-aspect-ratio: 768 / 1024) {
+    .background {
+        background-image: url(cover_bg_pc-CRDI2oRc.png);/* PC */
+    }
+}
+
+
+/* title */
+.title {
+    width: 322px; /* the same width as the SVG, or use max-content */
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10vh;
+    z-index: 2;
+}
+.title svg {
+    filter: drop-shadow(0px 0px 10px rgb(240,187,124,0.8));
+    transition: filter 0.3s ease;
+}
+
+/* Bottom mask layer*/
+.footer {
+    position: fixed;
+    bottom: -2vh;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 70%,rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/*title parallel universe*/
+.header {
+    position: absolute;
+    top: 0vh;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.title svg {
+    filter: drop-shadow(0px 0px 8px rgb(240,187,124,0.6));
+    transition: filter 0.5s ease;
+}
+#mobile-svg {
+    display: block;
+}
+#pc-svg {
+    display: none;
+    position: fixed;
+    top: -6vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (min-aspect-ratio: 0.75) {
+    #mobile-svg {
+        display: none;
+    }
+    #pc-svg {
+        display: block;
+    }
+}
+
+/* button */
+.button-container {
+    text-align: center;
+    z-index: 2;
+}
+
+/* button */
+.start-button {
+    position: relative;
+    bottom: 0vh;
+    background: linear-gradient(to bottom, #4AC632 0%, #1AB14D 100%);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    padding: 20px 12px;
+    border-radius: 4px; /* rounded */
+    z-index: 2;
+}
+.start-button:hover {
+    background: linear-gradient(to bottom, #50DE35 0%, #1DC155 100%);
+}
+/* svg projection */
+.start-button svg {
+    filter: drop-shadow(0px 2px 2px rgba(3, 94, 0, 0.5)); /* projection */
+    fill-opacity: 1;
+}
+
+/* black background ease-in */
+@keyframes fade-in-opacity {
+    0% {
+        opacity: 0;
+        transform: translateZ(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none; /* Avoid overlays that affect the interaction of other elements */
+    z-index: 2;
+    will-change: opacity;
+}
+.overlay.active {
+    animation: fade-in-opacity 1s ease-out forwards; /* Trigger animation on active class */
+    pointer-events: auto; /* Allow interaction when overlay is active */
+}
