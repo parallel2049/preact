@@ -5,12 +5,12 @@ export default defineConfig({
   plugins: [preact()],
   base: "/preact/",
    build: {
-      target: 'esnext',  // 确保使用 ESNext 的构建方式
+      target: 'esnext',
       minify: false,
     },
     server: {
       mimeTypes: {
-        jsx: 'application/javascript' // 确保 JSX 被识别为 JavaScript
+        jsx: 'application/javascript'
       },
     },
 });
