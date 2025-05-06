@@ -9372,7 +9372,7 @@ const StoryNode$1 = ({ nodeId, visibleNode, isFading, setCurrentNode, setIsFadin
       typedText,
       /* @__PURE__ */ u$1("span", { className: "option-story-blinking-cursor", children: "|" })
     ] }),
-    /* @__PURE__ */ u$1("img", { className: "option-story-bg", src: "/option_story_bg_KimIlsung_4.png", alt: "" }),
+    /* @__PURE__ */ u$1("img", { className: "option-story-bg", src: `${"/preact/"}option_story_bg_KimIlsung_4.png`, alt: "" }),
     /* @__PURE__ */ u$1("div", { className: "option-story-overlay" }),
     typingDone && /* @__PURE__ */ u$1("div", { className: "option-story-button-footer", children: [
       /* @__PURE__ */ u$1(
@@ -9655,7 +9655,8 @@ const Game = () => {
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung", "Salman", "Milei", "Modi", "Shinzoabe", "Shinzoabe", "Yoonsuk"];
     const base = "/preact/";
     const images = imageNames.flatMap((name) => [
-      `${base}game_image_${name}.png`
+      `${base}game_image_${name}.png`,
+      `${base}game_image_${name}bg.png`
     ]);
     const total = images.length + 1;
     let loaded = 0;
@@ -9938,7 +9939,7 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Modi" }),
         /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Modi.png`, alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Modibg.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Modibg.png", alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
