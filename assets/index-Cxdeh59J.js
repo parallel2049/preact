@@ -9653,9 +9653,10 @@ const Game = () => {
     storyBgm.current.loop = true;
     if (!loading) return;
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung", "Salman", "Milei", "Modi", "Shinzoabe", "Shinzoabe", "Yoonsuk"];
+    const assetBase = "/preact/";
     const images = imageNames.flatMap((name) => [
-      `/game_image_${name}.png`,
-      `/game_image_${name}bg.png`
+      `${assetBase}game_image_${name}.png`,
+      `${assetBase}game_image_${name}bg.png`
     ]);
     const total = images.length + 1;
     let loaded = 0;
@@ -9950,7 +9951,7 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Yoonsuk" }),
         /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Yoonsuk.png`, alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Yoonsukbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Yoonsukbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "after" })
