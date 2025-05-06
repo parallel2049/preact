@@ -64,7 +64,7 @@ const Home = ({ navigate }) => {
     if (!loading) return;
     const isDesktop = window.innerWidth / window.innerHeight > 768.01 / 1024;
     const img = new Image();
-    img.src = isDesktop ? "/cover_bg_pc.png" : "/cover_bg_min.png";
+    img.src = isDesktop ? "./cover_bg_pc.png" : "./cover_bg_min.png";
     const audio = new Audio("/sound_start_game.mp3");
     let loaded = 0;
     const total = 2;
