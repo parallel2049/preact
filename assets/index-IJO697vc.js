@@ -9656,7 +9656,7 @@ const Game = () => {
     const base = "/preact/";
     const images = imageNames.flatMap((name) => [
       `${base}game_image_${name}.png`,
-      `${base}game_image_${name}bg.png`
+      "game_image_${name}bg.png"
     ]);
     const total = images.length + 1;
     let loaded = 0;
