@@ -9939,7 +9939,7 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Modi" }),
         /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Modi.png`, alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Modibg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "../game_image_Modibg.png", alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
