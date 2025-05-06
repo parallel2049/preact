@@ -64,8 +64,8 @@ const Home = ({ navigate }) => {
     if (!loading) return;
     const isDesktop = window.innerWidth / window.innerHeight > 768.01 / 1024;
     const img = new Image();
-    img.src = isDesktop ? "../cover_bg_pc.png" : "../cover_bg_min.png";
-    const audio = new Audio("../sound_start_game.mp3");
+    img.src = isDesktop ? `${"/preact/"}cover_bg_pc.png` : `${"/preact/"}cover_bg_min.png`;
+    const audio = new Audio(`${"/preact/"}sound_start_game.mp3`);
     let loaded = 0;
     const total = 2;
     const updateProgress = () => {
@@ -99,8 +99,8 @@ const Home = ({ navigate }) => {
       `/game_image_${name}bg.png`
     ]);
     const audioPaths = [
-      "/sound_switch.mp3",
-      "/sound_bgm.mp3"
+      `${"/preact/"}sound_switch.mp3`,
+      `${"/preact/"}sound_bgm.mp3`
     ];
     const total = imagePaths.length + audioPaths.length;
     let loaded = 0;
@@ -9158,19 +9158,19 @@ const Make_character = ({ onReturn }) => {
   const popupConfigMap = {
     uploadCover: {
       title: "Size propose",
-      image: "/game_image_Hitler.png",
+      image: `${"/preact/"}game_image_Hitler.png`,
       text: "1182 * 528",
       button: "Upload"
     },
     uploadBackground: {
       title: "Size propose",
-      image: "/game_image_Hitlerbg.png",
+      image: `${"/preact/"}game_image_Hitlerbg.png`,
       text: "1182 * 528",
       button: "Upload"
     },
     uploadStoryBackground: {
       title: "Size propose",
-      image: "/game_image_story_upload.png",
+      image: `${"/preact/"}game_image_story_upload.png`,
       text: "2560*1440",
       button: "Upload"
     }
@@ -9649,7 +9649,7 @@ const Game = () => {
     }
   };
   y(() => {
-    storyBgm.current = new Audio("/sound_bgm_story.mp3");
+    storyBgm.current = new Audio(`${"/preact/"}sound_bgm_story.mp3`);
     storyBgm.current.loop = true;
     if (!loading) return;
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung", "Salman", "Milei", "Modi", "Shinzoabe", "Shinzoabe", "Yoonsuk"];
@@ -9675,7 +9675,7 @@ const Game = () => {
       img.onerror = updateProgress;
       img.src = src;
     });
-    const preloadAudio = new Audio("/sound_switch.mp3");
+    const preloadAudio = new Audio(`${"/preact/"}sound_switch.mp3`);
     preloadAudio.oncanplaythrough = updateProgress;
     preloadAudio.onerror = updateProgress;
     preloadAudio.load();
@@ -9832,8 +9832,8 @@ const Game = () => {
       ) }),
       /* @__PURE__ */ u$1("div", { className: "game-body-p", children: /* @__PURE__ */ u$1("p", { className: "fade-text", children: optionDescriptions[selectedOptionName] || "No description available." }, selectedOptionName) })
     ] }),
-    /* @__PURE__ */ u$1("audio", { ref: sound, id: "switchsound", src: "/sound_switch.mp3" }),
-    /* @__PURE__ */ u$1("audio", { ref: confirmSound, id: "confirmsound", src: "/sound_confirm.mp3" }),
+    /* @__PURE__ */ u$1("audio", { ref: sound, id: "switchsound", src: `${"/preact/"}sound_switch.mp3` }),
+    /* @__PURE__ */ u$1("audio", { ref: confirmSound, id: "confirmsound", src: `${"/preact/"}sound_confirm.mp3` }),
     /* @__PURE__ */ u$1("div", { className: "title-choose-char", children: [
       /* @__PURE__ */ u$1(
         "input",
@@ -9902,55 +9902,55 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Hitler" }),
         /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Hitler.png`, alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "game_image_Hitlerbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Hitlerbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Trump" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Trump.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Trumpbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Trump.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Trumpbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Kimilsung" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Kimilsung.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Kimilsungbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Kimilsung.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Kimilsungbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Stalin" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Stalin.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Stalinbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Stalin.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Stalinbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Salman" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Salman.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Salmanbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Salman.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Salmanbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Milei" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Milei.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Mileibg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Milei.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Mileibg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Modi" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Modi.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Modibg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Modi.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Modibg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Shinzoabe" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Shinzoabe.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Shinzoabebg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Shinzoabe.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Shinzoabebg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Yoonsuk" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Yoonsuk.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Yoonsukbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Yoonsuk.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: `${"/preact/"}game_image_Yoonsukbg.png`, alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "after" })
@@ -10031,7 +10031,7 @@ const App = () => {
   const [showGame, setShowGame] = d(false);
   const navigate = (newPage, playSound = false) => {
     if (playSound) {
-      const buttonSound = new Audio("/sound_start_game.mp3");
+      const buttonSound = new Audio(`${"/preact/"}sound_start_game.mp3`);
       buttonSound.play().catch((err) => console.log("Button sound blocked:", err));
     }
     if (newPage === "game") {
@@ -10041,7 +10041,7 @@ const App = () => {
         setTimeout(() => {
           setPage("game");
           setShowGame(true);
-          window.bgmAudio = new Audio("/sound_bgm.mp3");
+          window.bgmAudio = new Audio(`${"/preact/"}sound_bgm.mp3`);
           window.bgmAudio.loop = true;
           window.bgmAudio.volume = 1;
           window.bgmAudio.play().catch((err) => console.log("BGM autoplay blocked:", err));
