@@ -64,8 +64,8 @@ const Home = ({ navigate }) => {
     if (!loading) return;
     const isDesktop = window.innerWidth / window.innerHeight > 768.01 / 1024;
     const img = new Image();
-    img.src = isDesktop ? "/cover_bg_pc.png" : "/cover_bg_min.png";
-    const audio = new Audio("/sound_start_game.mp3");
+    img.src = isDesktop ? "../cover_bg_pc.png" : "../cover_bg_min.png";
+    const audio = new Audio("../sound_start_game.mp3");
     let loaded = 0;
     const total = 2;
     const updateProgress = () => {
@@ -9901,8 +9901,8 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "before" }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Hitler" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "/game_image_Hitler.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "/game_image_Hitlerbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: "../game_image_Hitler.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "../game_image_Hitlerbg.png", alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
