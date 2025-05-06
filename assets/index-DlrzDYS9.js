@@ -9655,8 +9655,7 @@ const Game = () => {
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung", "Salman", "Milei", "Modi", "Shinzoabe", "Shinzoabe", "Yoonsuk"];
     const base = "/preact/";
     const images = imageNames.flatMap((name) => [
-      `${base}game_image_${name}.png`,
-      "game_image_${name}bg.png"
+      `${base}game_image_${name}.png`
     ]);
     const total = images.length + 1;
     let loaded = 0;
