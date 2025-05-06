@@ -9653,10 +9653,10 @@ const Game = () => {
     storyBgm.current.loop = true;
     if (!loading) return;
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung", "Salman", "Milei", "Modi", "Shinzoabe", "Shinzoabe", "Yoonsuk"];
-    const assetBase = "/preact/";
+    const base = "/preact/";
     const images = imageNames.flatMap((name) => [
-      `${assetBase}game_image_${name}.png`,
-      `${assetBase}game_image_${name}bg.png`
+      `${base}game_image_${name}.png`,
+      `${base}game_image_${name}bg.png`
     ]);
     const total = images.length + 1;
     let loaded = 0;
