@@ -9826,7 +9826,7 @@ const Game = () => {
         "img",
         {
           className: "fade-image",
-          src: `/game_image_${selectedOptionName}bg.png`,
+          src: `${"/preact/"}game_image_${selectedOptionName}bg.png`,
           alt: "background"
         },
         selectedOptionName
