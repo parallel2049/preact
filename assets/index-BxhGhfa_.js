@@ -9013,13 +9013,13 @@ const Sign_in = ({ onReturn }) => {
   };
   const passwordRef = A(null);
   const firebaseConfig = {
-    apiKey: "AIzaSyBpzAa9kVcie7lEIz-gOjNoII1XpXiX7Ig",
-    authDomain: "parallel-universe-1f4bb.firebaseapp.com",
-    projectId: "parallel-universe-1f4bb",
-    storageBucket: "parallel-universe-1f4bb.firebasestorage.app",
-    messagingSenderId: "27891457805",
-    appId: "1:27891457805:web:ed89f63b3a29ada03f5a44",
-    measurementId: "G-P1103D9HW4"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
   };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
