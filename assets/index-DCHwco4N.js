@@ -9901,8 +9901,8 @@ const Game = () => {
       /* @__PURE__ */ u$1("div", { className: "before" }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
         /* @__PURE__ */ u$1("div", { className: "option-name", children: "Hitler" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img", src: "../game_image_Hitler.png", alt: "" }),
-        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "../game_image_Hitlerbg.png", alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img", src: `${"/preact/"}game_image_Hitler.png`, alt: "" }),
+        /* @__PURE__ */ u$1("img", { className: "option-img-bg", src: "game_image_Hitlerbg.png", alt: "" }),
         /* @__PURE__ */ u$1("div", { className: "option-img-bg-desktop" })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "option", children: [
