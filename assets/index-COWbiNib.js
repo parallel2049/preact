@@ -9013,10 +9013,10 @@ const Sign_in = ({ onReturn }) => {
   };
   const passwordRef = A(null);
   const firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
+    apiKey: "parallel-universe",
+    authDomain: "parallel-universe",
+    projectId: "parallel-universe",
+    storageBucket: "parallel-universe.app",
     messagingSenderId: "",
     appId: "",
     measurementId: ""
