@@ -95,8 +95,8 @@ const Home = ({ navigate }) => {
     if (localStorage.getItem("gameLoaded")) return;
     const imageNames = ["Hitler", "Trump", "Stalin", "Kimilsung"];
     const imagePaths = imageNames.flatMap((name) => [
-      `/game_image_${name}.png`,
-      `/game_image_${name}bg.png`
+      `${"/preact/"}game_image_${name}.png`,
+      `${"/preact/"}game_image_${name}bg.png`
     ]);
     const audioPaths = [
       `${"/preact/"}sound_switch.mp3`,
